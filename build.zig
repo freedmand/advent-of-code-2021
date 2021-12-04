@@ -4,7 +4,7 @@ pub fn build(b: *std.build.Builder) void {
     const target = b.standardTargetOptions(.{});
     const mode = b.standardReleaseOptions();
 
-    comptime var days = [_][]const u8{ "1", "2" };
+    comptime var days = [_][]const u8{ "1", "2", "3" };
     const run_step = b.step("run", "Run the app");
     const test_step = b.step("test", "Run unit tests");
     inline for (days) |day| {
